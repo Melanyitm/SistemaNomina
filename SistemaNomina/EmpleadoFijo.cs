@@ -18,7 +18,7 @@ namespace SistemaNomina
 
         public override decimal CalcularSalario()
         {
-            return SalarioBase + Bonificacion - (DeduccionSalud + DeduccionPension);
+            return SalarioBase + Bonificacion ;
         }
     }
 }

@@ -14,8 +14,6 @@ namespace SistemaNomina
       public string Documento { get; set; }
       public string Cargo { get; set; }
       public decimal SalarioBase { get; set; }
-      public decimal DeduccionSalud { get; set; }
-      public decimal DeduccionPension { get; set; }
       public DateTime FechaPago { get; set; }
       public string Observaciones { get; set; }
 
@@ -28,8 +26,6 @@ namespace SistemaNomina
             Documento = documento;
             Cargo = cargo;
             SalarioBase = salarioBase;
-            DeduccionSalud = salarioBase * 0.04m;
-            DeduccionPension = salarioBase * 0.04m;
             FechaPago = fechaPago;
             Observaciones = observaciones;
 

@@ -28,8 +28,9 @@ namespace SistemaNomina
             Console.WriteLine("\n--- Nómina de Empleados ---");
             foreach (var empleado in Empleados)
             {
-                Console.WriteLine($"Empleado: {empleado.Nombre} {empleado.Apellido} - Salario: {empleado.CalcularSalario():C}");
+                Console.WriteLine($"Empleado: {empleado.Nombre} {empleado.Apellido} - Salario: {empleado.CalcularSalario():C} ");
             }
         }
     }
 }
+
