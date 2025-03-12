@@ -8,17 +8,19 @@ namespace SistemaNomina
 {
     public class EmpleadoFijo : Empleado
     {
-        public decimal Bonificacion { get; set; }
+        public decimal SalarioBase { get; set; }
+        private const decimal DeduccionSalud = 0.04m;
+        private const decimal DeduccionPension = 0.04m;
 
-        public EmpleadoFijo(int id, string nombre, string apellido, string documento,string cargo, decimal salarioBase, decimal bonificacion, DateTime fechaPago, string observaciones)
-            : base(id,nombre,apellido,documento,cargo,salarioBase,fechaPago,observaciones)
+        public EmpleadoFijo(int id, string nombre, string apellido, DateTime fechaIngreso, DateTime fechaPago, decimal salarioBase)
+       : base(id, nombre, apellido, fechaIngreso, fechaPago, salarioBase * (DeduccionSalud + DeduccionPension))
         {
-            Bonificacion = bonificacion;
+            SalarioBase = salarioBase;
         }
 
         public override decimal CalcularSalario()
         {
-            return SalarioBase + Bonificacion ;
+            return SalarioBase - Deducciones;
         }
     }
 }

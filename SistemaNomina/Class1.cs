@@ -6,28 +6,23 @@ using System.Threading.Tasks;
 
 namespace SistemaNomina
 {
-    public abstract class Empleado
-    { public int id { get; set; }
-        public int Id { get; }
-        public string Nombre { get; set; }
+    public abstract class Empleado : ICalcular1
+    { public int Id { get; set; }
+      public string Nombre { get; set; }
       public string Apellido { get; set; }
-      public string Documento { get; set; }
-      public string Cargo { get; set; }
-      public decimal SalarioBase { get; set; }
+      public DateTime FechaInicio { get; set; }
       public DateTime FechaPago { get; set; }
-      public string Observaciones { get; set; }
+      public decimal Deducciones { get; set; }
 
 
-        public Empleado(int id, string nombre, string apellido, string documento, string cargo, decimal salarioBase, DateTime fechaPago, string observaciones)
+        public Empleado(int id, string nombre, string apellido, DateTime fechaInicio, DateTime fechaPago, decimal deducciones)
         {
             Id = id;
             Nombre = nombre;
             Apellido = apellido;
-            Documento = documento;
-            Cargo = cargo;
-            SalarioBase = salarioBase;
+            FechaInicio = fechaInicio;
             FechaPago = fechaPago;
-            Observaciones = observaciones;
+            Deducciones = deducciones;
 
         }
 

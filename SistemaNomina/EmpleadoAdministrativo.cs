@@ -9,13 +9,18 @@ namespace SistemaNomina
 {
     public class EmpleadoAdministrativo : Empleado
     {
-        public EmpleadoAdministrativo(int id, string nombre, string apellido, string documento, string cargo, decimal salarioBase, DateTime fechaPago, string observaciones)
-        : base(id, nombre, apellido, documento, cargo, salarioBase,fechaPago,observaciones)
-        { }
+        public decimal SalarioBase { get; set; }
+        private const decimal DeduccionSalud = 0.04m;
+        private const decimal DeduccionPension = 0.04m;
+        public EmpleadoAdministrativo(int id, string nombre, string apellido, DateTime fechaIngreso, DateTime fechaPago, decimal salarioBase)
+        : base(id, nombre, apellido, fechaIngreso, fechaPago, salarioBase * (DeduccionSalud + DeduccionPension))
+        {
+            SalarioBase = salarioBase;
+        }
 
         public override decimal CalcularSalario()
         {
-            return SalarioBase;
+            return SalarioBase-Deducciones;
         }
 
 
