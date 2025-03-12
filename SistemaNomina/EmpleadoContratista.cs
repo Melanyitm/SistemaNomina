@@ -11,11 +11,11 @@ namespace SistemaNomina
         public decimal TarifaPorHora { get; set; }
         public int HorasTrabajadas { get; set; }
 
-        public EmpleadoContratista(int id, string nombre, string apellido, string docuemnto, string cargo, decimal tarifaPorHora, int horasTrabahadas, DateTime fechaPago, string observaciones)
-            : base(id, nombre, apellido, docuemnto, cargo, tarifaPorHora * horasTrabahadas, fechaPago, observaciones)
+        public EmpleadoContratista(int id, string nombre, string apellido, string documento, string cargo, decimal tarifaPorHora, int horasTrabajadas, DateTime fechaPago, string observaciones)
+            : base(id, nombre, apellido, documento, cargo, tarifaPorHora * horasTrabajadas, fechaPago, observaciones)
         {
             TarifaPorHora = tarifaPorHora;
-            HorasTrabajadas = horasTrabahadas;
+            HorasTrabajadas = horasTrabajadas;
         }
 
         public override decimal CalcularSalario()

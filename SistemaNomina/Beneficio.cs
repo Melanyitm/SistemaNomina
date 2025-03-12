@@ -8,13 +8,15 @@ namespace SistemaNomina
 {
     public class Beneficio
     {
+        public string Concepto { get; set; }
         public string Tipo { get; set; }
         public decimal Monto { get; set; }
 
 
-        public Beneficio(string tipo, decimal monto)
+        public Beneficio(string concepto, string tipo, decimal monto)
         {
             Tipo = tipo;
+            Concepto = concepto;
             Monto = monto;
         }
     }
