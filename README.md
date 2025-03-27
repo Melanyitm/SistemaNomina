@@ -1,4 +1,5 @@
 ProyectoAulaNomina
+
 Es un programa Diseñado para realizar la nomina a cierto tipos de empleados en una empresa
 
 Las empresas enfrentan dificultades en la administración de la nómina debido a la falta de herramientas estructuradas, lo que genera errores en los cálculos salariales, desorganización en los registros contables y posibles incumplimientos normativos. Muchas organizaciones aún realizan estos procesos de manera manual, lo que aumenta la probabilidad de inconsistencias, retrasos en los pagos y descontento entre los empleados. La ausencia de un sistema eficiente puede afectar la confianza del personal y la estabilidad financiera de la empresa, evidenciando la necesidad de una solución automatizada que optimice y agilice estos procesos
